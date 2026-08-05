@@ -1,7 +1,4 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-
 using namespace std;
 
 int main() {
@@ -21,9 +18,9 @@ int main() {
     }
 
     if (eleccion == resultado) {
-        cout << "¡Felicidades, ganaste!" << endl;
+        cout << "ganaste" << endl;
     } else {
-        cout << "Lo siento, perdiste." << endl;
+        cout << "perdiste." << endl;
     }
 
     return 0;
