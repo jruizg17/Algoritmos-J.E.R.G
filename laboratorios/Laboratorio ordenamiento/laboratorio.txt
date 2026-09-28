@@ -42,4 +42,11 @@ menos datos, y el insertion, haria un trabajo similar al selection, solo que
 al cambiar la lista constantemente genera nuevos variables y cambios que revisar
 
 
+PARTE F
+No estoy de acuerdo, el CI no tiene que ser solo para lenguajes de copilacion ya
+que este sirve para verificar cada cambio que se realiza en un repositorio, por lo
+que no hay que creer que solo sirve para c++
+
+
+
 
