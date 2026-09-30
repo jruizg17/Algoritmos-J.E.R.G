@@ -51,3 +51,54 @@ for n in (5, 15, 30):
     print(f"{n:>4}{tb:>13.2f}{tm:>12.2f}{tq:>12.2f}")
     
     #codigo hecho con IA para revisar mediciones de tiempo, por falta de tiempo
+
+#include <iostream>
+#include <vector>
+#include <chrono>
+#include <cstdlib>
+using namespace std;
+
+void quickSort(vector<int>& a, int ini, int fin) {
+    if (ini >= fin) return;
+    int pivote = a[fin];
+    int i = ini;
+    for (int j = ini; j < fin; j++) {
+        if (a[j] < pivote) {
+            swap(a[i], a[j]);
+            i++;
+        }
+    }
+    swap(a[i], a[fin]);
+    quickSort(a, ini, i - 1);
+    quickSort(a, i + 1, fin);
+}
+
+double medir(const vector<int>& datos, int repeticiones) {
+    int suma = 0;
+    auto inicio = chrono::high_resolution_clock::now();
+    for (int r = 0; r < repeticiones; r++) {
+        vector<int> copia = datos;
+        quickSort(copia, 0, (int)copia.size() - 1);
+        suma += copia[0];
+    }
+    auto fin = chrono::high_resolution_clock::now();
+    if (suma == -999999) cout << "";   // evita que el compilador elimine el trabajo
+    chrono::duration<double, micro> total = fin - inicio;
+    return total.count() / repeticiones;
+}
+
+int main() {
+    srand(42);
+    int tamanos[3] = {5, 15, 30};
+    int repeticiones = 200000;
+
+    cout << "n,tiempo_us\n";
+    for (int t = 0; t < 3; t++) {
+        int n = tamanos[t];
+        vector<int> datos(n);
+        for (int i = 0; i < n; i++) datos[i] = rand() % 1000;
+        double tiempo = medir(datos, repeticiones);
+        cout << n << "," << tiempo << "\n";
+    }
+    return 0;
+}
