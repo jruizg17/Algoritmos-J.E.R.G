@@ -1,0 +1,20 @@
+PARTE D (EXPLICACION)
+Con solo 5 datos, bubble Sort es el más rápido de los tres, porque hace pocas comparaciones 
+directas a diferencia del analisis extra que necesitan merge y quick para dividir y volver
+a unir los datos. Pero al llegar a 30 datos, bubble es el que más tiempo ganó,
+mientras que merge y quick crecieron mucho menos, porque estos no revisan par por par, sino
+que van partiendo el problema en pedazos más chicos, lo que les ahorra trabajo cuando
+hay más datos, por eso, con 30 elementos, quick Sort termina siendo el más rápido de los tres.
+
+PARTE F (PIPELINES)
+
+C++
+git push -> compilar -> ejecutar programa -> pruebas -> desplegar
+
+python
+git push -> instalar dependencias -> ejecutar programa -> pruebas → desplegar
+
+con ejecutar dependencias me refiero al caso en el que un programa tenga librerias
+externas que el codigo necesite para funcionar, por lo que pienso que es necesario antes de
+cualquier prueba de cualquier codigo, sin embargo solo es neceasario en el caso de que
+haya un codigo que lo requiera, es un paso omitible
