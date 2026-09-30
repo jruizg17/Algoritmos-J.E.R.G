@@ -1,0 +1,52 @@
+PARTE A
+1. De los 3 basicos el mas funcional para esa cantidad de datos es el 
+insertion sort, al tener su maximo de comparaciones como 999 
+(en el peor de los casos) ya que va insertando cada
+elemento en su posicion, a comparacion del bubble sort el 
+cual en el peor de los casos haria muchas mas de 1000 
+comparaciones al comparar pequeñas cantidades de datos, y 
+mejor que el selection sort ya que este al organizar el primer
+elemento vuelve a recorrer la lista completa haciendo que tenga que recorrer
+los mil elementos varias veces
+
+2. Un conjunto que hace que el quick sort se comporte pesimo podria ser
+[1,10,8,24,2,5,7,9,32,21,9,8,23,54,32,54,28,11,17,25,7]
+este conjunto seria malo para el quick sort porque al dividir el grupo con el
+pivote como el primer elemtno, usando el 1 dividiria el grupo donde 1 elemnto 
+queda solo y el resto queda desordenado y desagrupado en otro grupo
+
+3.Es mejor ordenar primero y luego usar busquedad binaria ya que al dividir
+el conjunto en partes iguales y ya estar organizado hace busquedades mas 
+concisas y no gasta tantos recursos como hacer una busquedad secuencial
+cien veces, en especial por la cantidad de datos
+
+PARTE B 
+-la secuencial tiene que buscar segun la cantidad de datos, al ir uno a uno
+si el elemento esta de primeras acaba en una busqueda, como si esta de ultimas
+o es inexistente acaba en el total de los datos que haya
+-la binaria siempre haria una cantidad similar de busquedad al ir buscando
+dividiendo el conjunto por pates iguales, lo que hace que la cantidad de
+busqueda que realice sea similar sin importar la posicion del dato 
+
+TABLA EN OTRO ARCHIVO
+
+PARTE C 
+-En una lista ordenada, bubble sort, insertion sort y selection sort
+harian una cantidad n de comparaciones al revisar la lista pero harian
+0 intercambios al ver que ya esta ordenada
+
+-En una lista desordenada, selection sort haria menos comparaciones al solo
+ir tomando comparaciones de 1 a 1 pero organizando, tomando un caso con pocos
+elementos, mientras que el bubble hace mas comparaciones y cambios al tomar
+menos datos, y el insertion, haria un trabajo similar al selection, solo que
+al cambiar la lista constantemente genera nuevos variables y cambios que revisar
+
+
+PARTE F
+No estoy de acuerdo, el CI no tiene que ser solo para lenguajes de copilacion ya
+que este sirve para verificar cada cambio que se realiza en un repositorio, por lo
+que no hay que creer que solo sirve para c++
+
+
+
+
