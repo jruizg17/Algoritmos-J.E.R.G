@@ -15,8 +15,8 @@
 // ============================================================
 
 int buscarCodigo(int v[], int n, int x) {
-    int izq = 0, der = n - 1;                     // <-- revise
-    while (izq <= der) {                         // <-- revise
+    int izq = 0, der = n - 1;                     // se corrigio cambiando de n a n-1 porque asi evitamos que al revisar se salga del arreglo o se desborde dandonos un error
+    while (izq <= der) {                         
         int medio = (izq + der) / 2;
         if (v[medio] == x) return medio;
         if (v[medio] < x) der = medio - 1;        // <-- revise
