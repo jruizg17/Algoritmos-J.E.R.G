@@ -1,13 +1,12 @@
 NOMBRES = ["CENTRO", "NORTE", "SUR", "ORIENTE", "OCCIDENTE", "CHAPINERO", "USAQUEN", "BOSA", "VEREDA"]
 
-# Definimos las aristas
-ARISTAS_RAW = [
+ARISTAS= [
     (0,1), (1,4), (0,2), (0,3), (1,5), (2,7), (3,6), (5,6), 
     (4,7), (7,8), (8,1), (7,5), (5,8), (2,6), (6,8), (1,8), 
     (5,7), (5,3)
 ]
 
-# Limpiamos duplicados considerando que en un grafo no dirigido (u, v) es igual a (v, u)
+# Limpiamos duplicados para evitar el error que me sale
 ARISTAS = list(set(tuple(sorted(e)) for e in ARISTAS_RAW))
 N = 9
 
