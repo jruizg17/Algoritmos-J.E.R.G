@@ -7,7 +7,7 @@ ARISTAS= [
 ]
 
 # Limpiamos duplicados para evitar el error que me sale
-ARISTAS = list(set(tuple(sorted(e)) for e in ARISTAS_RAW))
+ARISTAS = list(set(tuple(sorted(e)) for e in ARISTAS))
 N = 9
 
 # ---------- Representacion 1: matriz de adyacencia ----------
